@@ -63,7 +63,7 @@ function App() {
             // 1보다 작을때만 버튼을 보여줘라 라는 뜻
             <button className='main_btn' onClick={()=>{
               count = count + 1;
-              axios.get('https://6c3fac62-d531-4787-a6d9-e01d76badde1.mock.pstmn.io/productList')
+              axios.get('https://5815959d-63e5-4176-a5e0-44ee738870ce.mock.pstmn.io/newlist')
                 .then((result)=>{
                   let copyitem = [...items, ...result.data];
                   setItems(copyitem);
