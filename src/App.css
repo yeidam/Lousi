@@ -39,7 +39,12 @@ body{
   height: 50px;
   line-height: 30px;
   color: #000;
+  transition: 0.5s all ease;
   border: solid 1px #000;
+}
+.main_btn:hover{
+  background-color: #000;
+  color: #fff;
 }
 
 .App-header {

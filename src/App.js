@@ -26,7 +26,7 @@ function App() {
       <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">
-          <img className='logo' src={process.env.PUBLIC_URL + '/img/logo.png'}/>
+            <img className='logo' src={process.env.PUBLIC_URL + '/img/logo.png'}/>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
@@ -35,7 +35,7 @@ function App() {
             <Nav.Link onClick={()=>{navigate('/about')}}>테이블 램프</Nav.Link>
             {/* <Nav.Link onClick={()=>{navigate(-1)}}>이전</Nav.Link>
             <Nav.Link onClick={()=>{navigate(1)}}>다음</Nav.Link> */}
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
           </Nav>
         </Container>
       </Navbar>
@@ -60,7 +60,6 @@ function App() {
           
           {
             count < 1 ? 
-            // 1보다 작을때만 버튼을 보여줘라 라는 뜻
             <button className='main_btn' onClick={()=>{
               count = count + 1;
               axios.get('https://5815959d-63e5-4176-a5e0-44ee738870ce.mock.pstmn.io/newlist')
@@ -69,10 +68,8 @@ function App() {
                   setItems(copyitem);
                 }).catch(()=>{
                   console.log('통신실패')
-                  // 통신실패했을 때
                 })
             }}>MORE</button> : null
-            // 아니면 사라져라
           }
           
         </>
