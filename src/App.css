@@ -1,10 +1,31 @@
 .App {
   text-align: center;
 }
+body{
+  background-color: #f6f6f6;
+}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main_banner{
+  height: 800px;
+  background-size: cover;
+  background-position-y: 50%;
+}
+.main_title{
+  font-size: 60px;
+  margin: 50px;
+}
+.logo{
+  width: 100px;
+}
+.item-img{
+  width: 400px;
+}
+.main_product{
+  margin: 20px 0;
+  border: solid 1px #ccccccad;
+}
+.detail_img{
+  width: 500px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,9 +33,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.main_btn{
+  background-color: transparent;
+  width: 100px;
+  height: 50px;
+  line-height: 30px;
+  color: #000;
+  border: solid 1px #000;
+}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
