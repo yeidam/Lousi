@@ -4,9 +4,30 @@
 body{
   background-color: #f6f6f6;
 }
+.mainBanner_wrap{
+  overflow: hidden;
+}
+.mainBanner_wrap .slick-dots{
+  bottom: 30px;
+}
+.mainBanner_wrap .slick-prev{
+  z-index: 1;
+  left: 100px;
+}
+.mainBanner_wrap .slick-next{
+  z-index: 1;
+  right: 100px;
+}
+.mainBanner_wrap .slick-prev::before,
+.mainBanner_wrap .slick-next::before{
+  font-size: 50px;
+}
+.mainBanner_wrap .slick-dots li.slick-active button:before{
+  color: #fff;
+}
 
 .main_banner{
-  height: 800px;
+  width: 100%;
   background-size: cover;
   background-position-y: 50%;
 }

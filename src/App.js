@@ -2,13 +2,16 @@ import { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import axios, { Axios } from 'axios';
+import Slider from 'react-slick';
 import './App.css';
+
 import styled from 'styled-components';
 
 import img_01 from './banner.png';
 // import dataA from './data.js';
 import data from './data.js';
 import List from './Compornent/List.js';
+import Slide from './Compornent/slider.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About';
 
@@ -44,7 +47,8 @@ function App() {
       <Routes>
         <Route path='/' element={
         <>
-          <div className='main_banner' style={{backgroundImage :'url('+ img_01 +')'}}></div>
+          <Slide/>
+          {/* <div className='main_banner' style={{backgroundImage :'url('+ img_01 +')'}}></div> */}
           <h2 className='main_title'>Best Item</h2>
           <div className="container">
             <div className="row">
