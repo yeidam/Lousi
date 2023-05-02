@@ -20,19 +20,10 @@ export default class SimpleSlider extends Component {
                     <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner.png'}/>
                 </div>
                 <div>
-                    <h3>2</h3>
+                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner2.png'}/>
                 </div>
                 <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
+                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner3.png'}/>
                 </div>
             </Slider>
         </div>

@@ -1,17 +1,19 @@
 import { useState } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import axios, { Axios } from 'axios';
-import Slider from 'react-slick';
+import { FaSistrix } from "react-icons/fa";
 import './App.css';
 
-import styled from 'styled-components';
 
-import img_01 from './banner.png';
+// import img_01 from './banner.png';
 // import dataA from './data.js';
 import data from './data.js';
 import List from './Compornent/List.js';
-import Slide from './Compornent/slider.js';
+import Slide from './Compornent/Slider.js';
+import SliderTwo from './Compornent/SliderTwo.js';
+import MainPage from './Compornent/MainPage.js';
+import Event from './Compornent/Event.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About';
 
@@ -26,7 +28,7 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar bg="light" variant="light">
+      <Navbar variant="light">
         <Container>
           <Navbar.Brand href="#home">
             <img className='logo' src={process.env.PUBLIC_URL + '/img/logo.png'}/>
@@ -40,6 +42,26 @@ function App() {
             <Nav.Link onClick={()=>{navigate(1)}}>다음</Nav.Link> */}
             {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
           </Nav>
+          <div className='nav_wrap'>
+            <div className='nav_submenu'>
+              <ul className='d-flex'>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">CART</a></li>
+                <li><a href="#">MY PAGE</a></li>
+              </ul>
+            </div>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success"><FaSistrix className='search_icon'/></Button>
+            </Form>
+          </div>
+          
         </Container>
       </Navbar>
 
@@ -48,6 +70,9 @@ function App() {
         <Route path='/' element={
         <>
           <Slide/>
+          <MainPage/>
+          <SliderTwo/>
+          <Event/>
           {/* <div className='main_banner' style={{backgroundImage :'url('+ img_01 +')'}}></div> */}
           <h2 className='main_title'>Best Item</h2>
           <div className="container">
@@ -88,7 +113,9 @@ function App() {
         
       </Routes>
       
-      
+      <footer>
+        푸터임
+      </footer>
     </div>
   );
 }

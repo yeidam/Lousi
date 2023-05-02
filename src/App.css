@@ -1,11 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url(//db.onlinewebfonts.com/c/df6661ea8e32901509b9a437fff6cfaf?family=Reckless+Neue+Light);
 .App {
   text-align: center;
+  width: 100%;
 }
 body{
-  background-color: #f6f6f6;
+  background-color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
 }
+li{
+  list-style: none;
+}
+/* nav */
+.navbar-expand{
+  z-index: 99;
+  background-color: #0000004d;
+}
+.nav_wrap .nav_submenu > ul > li > a{
+  display: block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+}
+.nav_wrap .nav_submenu > ul > li > a:hover{
+  color: #ff9000;
+}
+.btn-outline-success{
+  color: #ff9000;
+  border: solid 1px #ff9000;
+  position: absolute;
+  right: 8px;
+  top: 0;
+}
+.btn-outline-success:hover{
+  background-color: #ff9000;
+  border: solid 1px #ff9000;
+}
+.nav_wrap > form{
+  position: relative;
+}
+.nav_wrap > form > input{
+  background-color: transparent;
+}
+.nav_wrap > form > input::placeholder{
+  color: #cecece;
+}
+.form-control:focus{
+  border-color: #ff9000;
+  box-shadow: 0 0 0 0.15rem rgb(255, 144, 0, .25);
+}
+.search_icon{
+  position: relative;
+  top: -2px;
+}
+
+/* 배너 */
 .mainBanner_wrap{
   overflow: hidden;
+  position: relative;
+  top: -105px;
 }
 .mainBanner_wrap .slick-dots{
   bottom: 30px;
@@ -25,7 +80,6 @@ body{
 .mainBanner_wrap .slick-dots li.slick-active button:before{
   color: #fff;
 }
-
 .main_banner{
   width: 100%;
   background-size: cover;
@@ -35,6 +89,7 @@ body{
   font-size: 60px;
   margin: 50px;
 }
+
 .logo{
   width: 100px;
 }
@@ -90,4 +145,214 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* main_page */
+.main_page_wrap{
+  position: relative;
+}
+.main_page_wrap::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.main_1{
+  width: 70%;
+  height: 600px;
+  background-color: #e6e0e0;
+  margin-bottom: 400px;
+}
+.main_2{
+  float: right;
+}
+.main_1 .main_text_wrap{
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 150px;
+  position: relative;
+}
+.main_1 h2{
+  font-family: "Reckless Neue Light";
+  font-size: 50px;
+  font-weight: 500;
+  text-align: start;
+  margin-left: 50px;
+}
+.main_1 span{
+  text-align: start;
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+.main_1 .main_btn{
+  color: #000;
+  border: solid 1px #000;
+  border-radius: 0;
+  position: absolute;
+  left: 50px;
+  bottom: -100px;
+  transition: 0.3s all ease;
+}
+.main_1 .main_btn:hover{
+  background-color: transparent;
+  bottom: -96px;
+  box-shadow: 2px 2px 2px #797979;
+}
+
+.main_1_img{
+  width: 600px;
+  position: absolute;
+  top: 100px;
+  right: 18%;
+}
+.main_2_img{
+  width: 600px;
+  position: absolute;
+  bottom: 100px;
+  left: 18%;
+}
+
+/* 카테고리 */
+.main_cate{
+  margin-top: 100px;
+}
+.main_cate .cate_wrap{
+  justify-content: space-between;
+}
+.main_cate .cate_wrap > ul{
+  width: 49.5%;
+  padding: 0;
+}
+.cate_img{
+  width: 100%;
+  position: relative;
+  transition: 0.5s all ease;
+  overflow: hidden;
+}
+.cate_hover{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff73;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s all ease;
+}
+.cate_btn{
+  width: 100px;
+  color: #000;
+  border: solid 1px #000;
+  position: relative;
+  top: calc(50% - 20px);
+  height: 40px;
+}
+.cate_btn:hover{
+  background-color: #000;
+  color: #fff;
+  border: solid 1px #000;
+}
+.cate_img:hover .cate_hover{
+  top: 0;
+}
+.cate_img img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+.cate_wrap p{
+  font-family: "Reckless Neue Light";
+  font-size: 20px;
+  margin: 10px 0 30px 0;
+}
+
+/* best */
+.best_wrap{
+  margin-top: 100px;
+  height: 700px;
+}
+.best_wrap h2{
+  margin: 20px 0;
+  font-family: "Reckless Neue Light";
+  font-size: 50px;
+}
+.mySwiper{
+  height: 600px;
+}
+.bestitem{
+  margin-top: 60px;
+}
+.bestimg{
+  width: 100%;
+}
+.bestimg_wrap{
+  position: relative;
+}
+.best_icon{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  font-size: 30px;
+}
+#root .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal{
+  top: 595px;
+}
+#root .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: #ff9000;
+}
+#root .swiper-button-next,
+#root .swiper-button-prev{
+  color: #ff9000;
+  top: 30px;
+}
+#root .swiper-button-prev{
+  left: 93%;
+}
+#root .swiper-button-next:after, #root .swiper-button-prev:after{
+  font-size: 20px;
+}
+
+/* 이벤트 */
+.event{
+  width: 90%;
+  height: 800px;
+  background-color: #dbdbdb;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.event h2{
+  margin: 20px 0;
+  font-family: "Reckless Neue Light";
+  font-size: 50px;
+}
+.event .event_wrap > ul > li{
+  width: 33.33%;
+}
+.event .event_wrap > ul > li:nth-child(1),
+.event .event_wrap > ul > li:nth-child(3){
+  border-top: solid 2px #000;
+}
+.event .event_wrap > ul > li:nth-child(2){
+  border-bottom: solid 2px #000;
+}
+
+.event .event_wrap > ul > li:nth-child(1) .event_img_wrap{
+  background-color: #61dafb;
+  width: 90%;
+  margin: 0 auto;
+  height: 600px;
+}
+.event .event_wrap > ul > li:nth-child(2) .event_img_wrap{
+  background-color: #219ec0;
+  width: 90%;
+  margin: 0 auto;
+  height: 600px;
+}
+.event .event_wrap > ul > li:nth-child(3) .event_img_wrap{
+  background-color: #0c4555;
+  width: 90%;
+  margin: 0 auto;
+  height: 600px;
 }
