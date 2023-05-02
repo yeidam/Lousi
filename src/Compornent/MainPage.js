@@ -37,7 +37,7 @@ const MainPage = () => {
                             <div className="cate_img">
                                 <img  src={process.env.PUBLIC_URL + '/img/category_1.jpg'}/>
                                 <div className="cate_hover">
-                                    <Button className="cate_btn" variant="outline-primary">더보기</Button>{' '}
+                                    <Button className="cate_btn" variant="outline-primary">MORE</Button>{' '}
                                 </div>
                             </div>
                             <p>PENDANT LAMP</p>
@@ -46,7 +46,7 @@ const MainPage = () => {
                             <div className="cate_img">
                                 <img  src={process.env.PUBLIC_URL + '/img/category_2.jpg'}/>
                                 <div className="cate_hover">
-                                    <Button className="cate_btn" variant="outline-primary">더보기</Button>{' '}
+                                    <Button className="cate_btn" variant="outline-primary">MORE</Button>{' '}
                                 </div>
                             </div>
                             <p>TABLE LAMP</p>
@@ -57,7 +57,7 @@ const MainPage = () => {
                             <div className="cate_img">
                                 <img  src={process.env.PUBLIC_URL + '/img/category_3.webp'}/>
                                 <div className="cate_hover">
-                                    <Button className="cate_btn" variant="outline-primary">더보기</Button>{' '}
+                                    <Button className="cate_btn" variant="outline-primary">MORE</Button>{' '}
                                 </div>
                             </div>
                             <p>FLOOR LAMP</p>
@@ -66,7 +66,7 @@ const MainPage = () => {
                             <div className="cate_img">
                                 <img  src={process.env.PUBLIC_URL + '/img/category_4.webp'}/>
                                 <div className="cate_hover">
-                                    <Button className="cate_btn" variant="outline-primary">더보기</Button>{' '}
+                                    <Button className="cate_btn" variant="outline-primary">MORE</Button>{' '}
                                 </div>
                             </div>
                             <p>WALL LAMP</p>

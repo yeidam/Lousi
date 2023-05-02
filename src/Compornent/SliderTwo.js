@@ -6,7 +6,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 
 
-import data from '../data.js';
+import {data,product} from '../data.js';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -45,56 +45,11 @@ export default function App() {
                             <IoHeartOutline className="best_icon"/>
                         </div>
                         <p>{data[i].title}</p>
-                        <p>{data[i].color}</p>
+                        <p>{data[i].price}원</p>
                     </div>
                 </SwiperSlide>
                     )
                 })}
-                {/* <SwiperSlide>
-                    <div className="bestitem">
-                        <div className="bestimg_wrap">
-                            <img className="bestimg" src={process.env.PUBLIC_URL + '/img/img_00.jpg'}/>
-                            <IoHeartOutline className="best_icon"/>
-                        </div>
-                        <p>PH5</p>
-                        <p>모노크롬 화이트</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="bestitem">
-                    <div className="bestimg_wrap">
-                            <img className="bestimg" src={process.env.PUBLIC_URL + '/img/img_01.jpg'}/>
-                            <IoHeartOutline className="best_icon"/>
-                        </div>
-                        <p>PH5</p>
-                        <p>모노크롬 화이트</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="bestitem">
-                    <div className="bestimg_wrap">
-                            <img className="bestimg" src={process.env.PUBLIC_URL + '/img/img_02.jpg'}/>
-                            <IoHeartOutline className="best_icon"/>
-                        </div>
-                        <p>PH5</p>
-                        <p>모노크롬 화이트</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="bestitem">
-                    <div className="bestimg_wrap">
-                            <img className="bestimg" src={process.env.PUBLIC_URL + '/img/img_03.jpg'}/>
-                            <IoHeartOutline className="best_icon"/>
-                        </div>
-                        <p>PH5</p>
-                        <p>모노크롬 화이트</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide> */}
             </Swiper>
         </div>
         
