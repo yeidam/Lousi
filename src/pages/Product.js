@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import axios, { Axios } from 'axios';
-import {data,product} from '../data.js';
+import {product} from '../data.js';
 import List from '../Compornent/List.js';
 import { useNavigate } from 'react-router-dom';
 
+let count = 0;
+
 const Product = () => {
-    let count = 0;
+
     let [items, setItems] = useState(product);
     return (
         <>
@@ -31,7 +33,7 @@ const Product = () => {
                 count = count + 1;
                 axios.get('https://5815959d-63e5-4176-a5e0-44ee738870ce.mock.pstmn.io/newlist')
                 .then((result)=>{
-                    let copyitem = [...items, ...result.product];
+                    let copyitem = [...items, ...result.data];
                     setItems(copyitem);
                 }).catch(()=>{
                     console.log('통신실패')

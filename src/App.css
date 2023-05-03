@@ -9,6 +9,7 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
 }
+
 li{
   list-style: none;
 }
@@ -27,14 +28,14 @@ li{
 .nav_wrap .nav_submenu > ul > li > a:hover{
   color: #ff9000;
 }
-.btn-outline-success{
+.nav_wrap .btn-outline-success{
   color: #ff9000;
   border: solid 1px #ff9000;
   position: absolute;
   right: 8px;
   top: 0;
 }
-.btn-outline-success:hover{
+.nav_wrap .btn-outline-success:hover{
   background-color: #ff9000;
   border: solid 1px #ff9000;
 }
@@ -442,18 +443,46 @@ li{
   display: block;
 }
 
-/* product */
+/* product */   
+/* list */
 .product_title h2{
   font-family: "Reckless Neue Light";
   font-size: 50px;
-  font-weight: 500;margin: 100pxpen;
+  font-weight: 500;
+  margin: 100px;
 }
 .list_item{
   margin-bottom: 50px;
+  text-align: start;
 }
-.item-img{
+.list_item span{
+  width: 97%;
+  height: 1px;
+  display: block;
+  border: solid 1px #c7c7c7;
+  margin: 15px 0;
+}
+.list_item h4{
+  font-size: 20px;
+  margin-top: 15px;
+}
+.list_item p{
+  font-size: 14px;
+}
+.list_item .best_icon{
+  right: 25px;
+}
+.list_img_wrap{
+  position: relative;
+}
+
+.list_img{
   background-color: #f3f3f3;
+  width: 400px;
+  
 }
+
+
 /* 디테일 */
 .alert{
   background-color: #DBC29C;
@@ -508,4 +537,292 @@ li{
   background-color: transparent;
   color: #DBC29C;
   border: solid 1px #DBC29C;
+}
+.detail_detail .nav-tabs{
+  border-bottom: solid 1px #DBC29C;
+}
+.detail_detail .nav-tabs .nav-link.active{
+  border-color: #DBC29C #DBC29C #fff;
+}
+.detail_tab_wrap{
+  justify-content: center;
+  margin-top: 100px;
+}
+.detail_tab_wrap .nav-link{
+  color: #DBC29C;
+}
+.detail_tab{
+  text-align: center;
+}
+.detail_review{
+  position: relative;
+}
+.detail_text_wrap{
+  border-bottom: solid 1px #DBC29C;
+}
+.detail_text_wrap p{
+  line-height: 80px;
+}
+.detail_tab button{
+  border: solid 1px #DBC29C;
+  color: #DBC29C;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+/* Q&A */
+.notice{
+  margin-top: 100px;
+  position: relative;
+  left: calc(50% - 500px);
+  width: 1000px;
+}
+.notice h2{
+  font-family: "Reckless Neue Light";
+  font-size: 80px;
+  font-weight: 500;
+}
+.notice .notice_title_wrap p{
+  text-align: start;
+  margin-top: 40px;
+  margin-left: 30px;
+  font-size: 13px;
+  color: #a2a2a2;
+}
+.notice .notice_inner_title{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.notice_many,
+.notice_qna{
+  text-align: start;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.notice_qna{
+  margin-top: 100px;
+}
+
+.notice .notice_inner_title span:nth-child(2){
+  width: 150px;
+  text-align: start;
+}
+.notice .accordion-item{
+  border-top: solid 1px #000;
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+}
+.notice .accordion-item:first-child{
+  border-bottom: none !important;
+}
+.notice .accordion-item:last-child{
+  border-bottom: solid 1px #000;
+}
+
+.notice .notice_inner_text{
+  width: 600px;
+  margin: 0 auto;
+  text-align: start;
+  font-size: 13px;
+  padding: 30px 0;
+}
+.notice .accordion-button:not(.collapsed){
+  background-color: #DBC29C;
+  color: #fff;
+  border-radius: 0;
+}
+.notice .accordion-button:focus{
+  border-color: #DBC29C;
+  box-shadow: none;
+  border-radius: 0;
+}
+.notice .accordion-button:not(.collapsed)::after{
+  background-image: var(--bs-accordion-btn-icon);
+}
+.notice .notice_qna_inner:first-child{
+  border-top: solid 1px #000;
+}
+.notice .notice_qna_inner{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #000;
+  line-height: 50px;
+}
+.notice .notice_qna_inner span:nth-child(2){
+  width: 500px;
+  text-align: start;
+  display: block;
+}
+.notice_btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+  font-size: 13px;
+  height: 33px;
+}
+.notice_bottom{
+  margin-top: 50px;
+}
+.notice_search{
+  margin-left: 350px;
+}
+.notice_bottom .notice_search_btn{
+  width: 131px;
+  border-radius: 0;
+  background-color: transparent;
+  color: #DBC29C;
+  border: solid 1px #DBC29C;
+  margin-right: 30px;
+  font-size: 13px;
+}
+.notice_bottom .dropdown-toggle::after{
+  margin-left: 80px;
+}
+.notice_bottom .dropdown-menu{
+  min-width: 130px;
+}
+.notice_bottom .dropdown-item{
+  width: 130px !important;
+}
+.notice_search_btn_inner{
+  border-radius: 0;
+}
+.notice_bottom .form-control{
+  border-radius: 0;
+  font-size: 13px;
+  height: 33px;
+}
+.notice_bottom .notice_search_icon{
+  border: none;
+  color: #000;
+  position: absolute;
+  right: 10px;
+}
+.notice_bottom .notice_search_icon:hover{
+  background-color: transparent;
+}
+.notice_search > form{
+  position: relative;
+}
+
+/* about */
+.about{
+  margin-top: 100px;
+}
+.about_wrap{
+  width: 950px;
+  margin: 50px auto;
+  position: relative;
+}
+.about_wrap:hover .about_icon,
+.about_inner:hover .about_icon,
+.about_wrap3:hover .about_icon,
+.about_wrap4:hover .about_icon{
+  left: 20px;
+}
+.about h2{
+  font-family: "Reckless Neue Light";
+  font-size: 50px;
+  font-weight: 500;
+}
+.about .about_text{
+  position: absolute;
+  left: -20px;
+  bottom: -25px;
+  width: 500px;
+  background-color: #DBC29C;
+  text-align: start;
+  font-family: "Reckless Neue Light";
+  color: #fff;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.about .about_icon{
+  width: 100px;
+  line-height: 40px;
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+  transition: 0.3s all ease;
+}
+.about_margin{
+  margin-top: 300px !important;
+}
+.about_wrap2{
+  width: 950px;
+  margin: 200px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.about_inner{
+  position: relative;
+}
+.about_inner2{
+  top: 100px;
+}
+.about_img2 img{
+  width: 450px;
+  object-fit: cover;
+}
+.about .about_text2{
+  width: 350px;
+  bottom: -60px;
+}
+.about_wrap3{
+  position: relative;
+  width: 1100px;
+  margin: 100px 803px;
+}
+.about_wrap3 > .about_img{
+  text-align: end;
+}
+.about_wrap3 .about_text{
+  left: calc(30% - 400px);
+  bottom: -50px;
+}
+.about_wrap4{
+  position: relative;
+  width: 1100px;
+  left: -30px;
+  top: 100px;
+  margin-top: 200px;
+}
+.about_wrap4 .about_text{
+  left: calc(80% - 200px);
+}
+
+.about_cate{
+  width: 1000px;
+  margin: 0 auto;
+  height: 500px;
+  position: relative;
+  top: 200px;
+}
+.about_cate_box{
+  width: 20%;
+  height: 300px;
+}
+.about_cate_box:hover{
+  background-color: #f3f3f3;
+
+}
+.about_cate_box:hover .about_cate_icon{
+  left: 20px;
+}
+.about_cate_icon{
+  font-size: 40px;
+  position: relative;
+  top: -20px;
+  left: 0;
+  transition: 0.5s all ease;
 }

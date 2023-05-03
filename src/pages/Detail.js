@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { Tab, Tabs } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Button from 'react-bootstrap/Button';
 
 
 const Detail = (props) => {
@@ -51,9 +53,37 @@ const Detail = (props) => {
                         </Dropdown.Menu>
                     </Dropdown>
                     <div className='detail_buy_btn'>
-                        <button className="btn btn-danger buy_1">구매하기</button>
-                        <button className="btn btn-danger buy_2">장바구니에 담기</button>
+                        <Button className='buy_1' variant="outline-primary">구매하기</Button>{' '}
+                        <Button className='buy_2' variant="outline-primary">장바구니에 담기</Button>{' '}
                     </div>
+                </div>
+                <div className='detail_detail'>
+                    <Tabs
+                        defaultActiveKey="home"
+                        id="uncontrolled-tab-example"
+                        className="mb-3 detail_tab_wrap"
+                        >
+                        <Tab className='detail_tab' eventKey="home" title="상세설명">
+                            <img className='detail_detail_img' src={process.env.PUBLIC_URL + '/img/detail0'+props.items[id].id+'.png'}/>
+                        </Tab>
+                        <Tab className='detail_tab' eventKey="profile" title="후기">
+                            <div className='detail_review'>
+                                <div className='detail_text_wrap'>
+                                    <p>작성된 후기가 없습니다.</p>
+                                </div>
+                                <Button variant="outline-primary">후기 쓰기</Button>{' '}
+                            </div>
+                        </Tab>
+                        <Tab className='detail_tab' eventKey="contact" title="Q&A">
+                            <div className='detail_review'>
+                                <div className='detail_text_wrap'>
+                                    <p>작성된 질문이 없습니다.</p>
+                                </div>
+                                <Button variant="outline-primary">질문 쓰기</Button>{' '}
+                            </div>
+                        </Tab>
+                    </Tabs>
+                        
                 </div>
             </div>
         </div>

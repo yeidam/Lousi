@@ -32,11 +32,10 @@ function App() {
 
       <Navbar variant="light">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand onClick={()=>{navigate('/')}}>
             <img className='logo' src={process.env.PUBLIC_URL + '/img/logo.png'}/>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/detail')}}>펜던트</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about')}}>회사소개</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/notice')}}>공지사항</Nav.Link>
