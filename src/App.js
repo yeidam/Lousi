@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import axios, { Axios } from 'axios';
-import { FaSistrix } from "react-icons/fa";
-import './App.css';
 
+import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineShopping } from "react-icons/ai";
+import './App.css';
 
 // import img_01 from './banner.png';
 // import dataA from './data.js';
-import {data,product} from './data.js';
+import data from './data.js';
 import List from './Compornent/List.js';
 import Slide from './Compornent/Slider.js';
 import SliderTwo from './Compornent/SliderTwo.js';
@@ -19,7 +21,6 @@ import About from './pages/About';
 import Notice from './pages/Notice.js';
 import Product from './pages/Product';
 
-let count = 0;
 
 function App() {
 
@@ -32,35 +33,35 @@ function App() {
 
       <Navbar variant="light">
         <Container>
+
+          <Nav className="me-auto nav_menu">
+            <Nav.Link onClick={()=>{navigate('/')}}>HOME</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/about')}}>ABOUT</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/detail')}}>SHOP</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/notice')}}>BOARD</Nav.Link>
+          </Nav>
           <Navbar.Brand onClick={()=>{navigate('/')}}>
             <img className='logo' src={process.env.PUBLIC_URL + '/img/logo.png'}/>
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link onClick={()=>{navigate('/detail')}}>펜던트</Nav.Link>
-            <Nav.Link onClick={()=>{navigate('/about')}}>회사소개</Nav.Link>
-            <Nav.Link onClick={()=>{navigate('/notice')}}>공지사항</Nav.Link>
-            {/* <Nav.Link onClick={()=>{navigate(-1)}}>이전</Nav.Link>
-            <Nav.Link onClick={()=>{navigate(1)}}>다음</Nav.Link> */}
-            {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
-          </Nav>
           <div className='nav_wrap'>
             <div className='nav_submenu'>
               <ul className='d-flex'>
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="#">JOIN</a></li>
-                <li><a href="#">CART</a></li>
-                <li><a href="#">MY PAGE</a></li>
+                <li>
+                  <Form className="d-flex">
+                    <Form.Control
+                      type="search"
+                      placeholder="Search"
+                      className="me-2"
+                      aria-label="Search"
+                    />
+                    <Button variant="outline-success"><AiOutlineSearch className='search_icon'/></Button>
+                  </Form>
+                </li>
+                <li><Link to="/"><AiOutlineUser/></Link></li>
+                <li><Link to="/"><AiOutlineShopping/></Link></li>
               </ul>
             </div>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success"><FaSistrix className='search_icon'/></Button>
-            </Form>
+            
           </div>
           
         </Container>
@@ -103,91 +104,45 @@ function App() {
               <li>
                 <p>팔로우하기</p>
                 <ul className='footer_depth2'>
-                  <li>
-                    <a href="#">Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#">Linkedin</a>
-                  </li>
-                  <li>
-                    <a href="#">Pinterest</a>
-                  </li>
-                  <li>
-                    <a href="#">Youtube</a>
-                  </li>
+                  <li><Link to="/">Facebook</Link></li>
+                  <li><Link to="/">Instagram</Link></li>
+                  <li><Link to="/">Linkedin</Link></li>
+                  <li><Link to="/">Pinterest</Link></li>
+                  <li><Link to="/">Youtube</Link></li>
                 </ul>
               </li>
               <li>
                 <p>루이스폴센</p>
                 <ul className='footer_depth2'>
-                  <li>
-                    <a href="#">Design to Shape Light</a>
-                  </li>
-                  <li>
-                    <a href="#">루이스폴센 소개</a>
-                  </li>
-                  <li>
-                    <a href="#">문의처</a>
-                  </li>
-                  <li>
-                    <a href="#">디자인 및 조명 철학</a>
-                  </li>
-                  <li>
-                    <a href="#">언론</a>
-                  </li>
-                  <li>
-                    <a href="#">채용</a>
-                  </li>
-                  <li>
-                    <a href="#">Quality Policy</a>
-                  </li>
+                  <li><Link to="/">Design to Shape Light</Link></li>
+                  <li><Link to="/">루이스폴센 소개</Link></li>
+                  <li><Link to="/">문의처</Link></li>
+                  <li><Link to="/">디자인 및 조명 철학</Link></li>
+                  <li><Link to="/">언론</Link></li>
+                  <li><Link to="/">채용</Link></li>
+                  <li><Link to="/">Quality Policy</Link></li>
                 </ul>
               </li>
               <li>
                 <p>퀵 링크</p>
                 <ul className='footer_depth2'>
-                  <li>
-                    <a href="#">Pale Rose Collection</a>
-                  </li>
-                  <li>
-                    <a href="#">판매처 찾기</a>
-                  </li>
-                  <li>
-                    <a href="#">지원 및 FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#">마운팅 지침</a>
-                  </li>
-                  <li>
-                    <a href="#">제품 등록</a>
-                  </li>
-                  <li>
-                    <a href="#">뉴스레터</a>
-                  </li>
-                  <li>
-                    <a href="#">Sustainability report</a>
-                  </li>
+                  <li><Link to="/">Pale Rose Collection</Link></li>
+                  <li><Link to="/">판매처 찾기</Link></li>
+                  <li><Link to="/">지원 및 FAQ</Link></li>
+                  <li><Link to="/">마운팅 지침</Link></li>
+                  <li><Link to="/">제품 등록</Link></li>
+                  <li><Link to="/">뉴스레터</Link></li>
+                  <li><Link to="/">Sustainability report</Link></li>
                 </ul>
               </li>
             </ul>
           </div>
           <div className='footer_3'>
             <ul>
-              <li>
-                <a href="#">개인정보 보호 정책</a>
-              </li>
-              <li>
-                <a href="#">쿠키 정책</a>
-              </li>
-              <li>
-                <a href="#">문의 양식 - GDPR</a>
-              </li>
-              <li>
-                <a href="#">연례 보고서</a>
-              </li>
+              <li><Link to="/">개인정보 보호 정책</Link></li>
+              <li><Link to="/">쿠키 정책</Link></li>
+              <li><Link to="/">문의 양식 - GDPR</Link></li>
+              <li><Link to="/">연례 보고서</Link></li>
             </ul>
           </div>
         </div>

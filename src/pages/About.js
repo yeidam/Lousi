@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiOutlineSwapRight } from "react-icons/ai";
 
 const About = () => {
+    
+    
     return (
         <>
+            <div className='sub_header'></div>
             <div className='about'>
                 <div className='about_title'>
                     <h2>INSPIRATION</h2>
@@ -20,19 +23,19 @@ const About = () => {
                 </div>
                 <div className='about_wrap2'>
                     <div className='about_inner about_inner2'>
-                        <div className='about_img2'>
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="400">
                             <img src={process.env.PUBLIC_URL + '/img/how02.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>The dinnng rome</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
                     </div>
                     <div className='about_inner'>
-                        <div className='about_img2'>
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="300">
                             <img src={process.env.PUBLIC_URL + '/img/how03.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>Outdoor Lighting</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
@@ -40,58 +43,58 @@ const About = () => {
                 </div>
                 <div className='about_wrap2 about_margin'>
                     <div className='about_inner'>
-                        <div className='about_img2'>
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="300">
                             <img src={process.env.PUBLIC_URL + '/img/how05.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>The dinnng rome</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
                     </div>
-                    <div className='about_inner about_inner2'>
-                        <div className='about_img2'>
+                    <div className='about_inner about_inner2' data-aos="fade-up" data-aos-delay="400">
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="300">
                             <img src={process.env.PUBLIC_URL + '/img/how06.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>Outdoor Lighting</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
                     </div>
                 </div>
                 <div className='about_wrap3'>
-                    <div className='about_img'>
+                    <div className='about_img' data-aos="fade-up" data-aos-delay="400">
                         <img src={process.env.PUBLIC_URL + '/img/how10.webp'}/>
                     </div>
-                    <div className='about_text'>
+                    <div className='about_text' data-aos="fade-right" data-aos-delay="200">
                         <p>Bring your Outdoor Spaces Life</p>
                         <p className='about_icon'><AiOutlineSwapRight/></p>
                     </div>
                 </div>
                 <div className='about_wrap2'>
                     <div className='about_inner about_inner2'>
-                        <div className='about_img2'>
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="200">
                             <img src={process.env.PUBLIC_URL + '/img/how08.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>The hallway</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
                     </div>
                     <div className='about_inner'>
-                        <div className='about_img2'>
+                        <div className='about_img2' data-aos="fade-up" data-aos-delay="400">
                             <img src={process.env.PUBLIC_URL + '/img/how09.webp'}/>
                         </div>
-                        <div className='about_text about_text2'>
+                        <div className='about_text about_text2' data-aos="fade-right" data-aos-delay="200">
                             <p>Small space</p>
                             <p className='about_icon'><AiOutlineSwapRight/></p>
                         </div>
                     </div>
                 </div>
                 <div className='about_wrap4'>
-                    <div className='about_img'>
+                    <div className='about_img' data-aos="fade-up" data-aos-delay="400">
                         <img src={process.env.PUBLIC_URL + '/img/how04.webp'}/>
                     </div>
-                    <div className='about_text'>
+                    <div className='about_text' data-aos="fade-right" data-aos-delay="200">
                         <p>Bring your Outdoor Spaces Life</p>
                         <p className='about_icon'><AiOutlineSwapRight/></p>
                     </div>

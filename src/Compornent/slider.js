@@ -8,22 +8,24 @@ export default class SimpleSlider extends Component {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        // speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrow: true
+        arrow: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
     };
     return (
         <div className="mainBanner_wrap">
             <Slider {...settings}>
                 <div>
-                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner.png'}/>
+                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner3.png'}/>
                 </div>
                 <div>
                     <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner2.png'}/>
                 </div>
                 <div>
-                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner3.png'}/>
+                    <img className='main_banner' src={process.env.PUBLIC_URL + '/img/banner.png'}/>
                 </div>
             </Slider>
         </div>

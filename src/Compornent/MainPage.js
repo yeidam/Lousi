@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 
 const MainPage = () => {
+
+
     return (
         <>
             <div className="main_page_wrap">
                 <div className="main_1">
-                    <div className="main_text_wrap">
+                    <div className="main_text_wrap" data-aos="fade-right" data-aos-delay="200">
                         <h2>(RE)DISCOVER ICONS</h2>
                         <span>
                             시대를 초월한 디자인을 겸비한 최고의 퀄리티. Poul Henningsen의 PH5, Arne Jacobsen의 AJ Oxford, Øivind Slaatto의 Patera와 Verner Panton의 Panthella 테이블 등 세계적으로 유명한 디자이너들의 아이코닉한 디자인을 다시 발견해 보세요.
@@ -14,11 +16,11 @@ const MainPage = () => {
                         <Button className="main_btn" variant="outline-primary">알아보기</Button>{' '}
                     </div>
                 </div>
-                <div className="main_1_img">
+                <div className="main_1_img" data-aos="fade-left" data-aos-delay="200">
                     <img  src={process.env.PUBLIC_URL + '/img/main_1.webp'}/>
                 </div>
                 <div className="main_1 main_2">
-                    <div className="main_text_wrap">
+                    <div className="main_text_wrap" data-aos="fade-left" data-aos-delay="200">
                         <h2>AJ Oxford</h2>
                         <span>
                             시대를 초월한 디자인을 겸비한 최고의 퀄리티. Poul Henningsen의 PH5, Arne Jacobsen의 AJ Oxford, Øivind Slaatto의 Patera와 Verner Panton의 Panthella 테이블 등 세계적으로 유명한 디자이너들의 아이코닉한 디자인을 다시 발견해 보세요.
@@ -26,7 +28,7 @@ const MainPage = () => {
                         <Button className="main_btn" variant="outline-primary">알아보기</Button>{' '}
                     </div>
                 </div>
-                <div className="main_2_img">
+                <div className="main_2_img" data-aos="fade-right" data-aos-delay="200">
                     <img  src={process.env.PUBLIC_URL + '/img/main_2.webp'}/>
                 </div>
             </div>

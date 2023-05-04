@@ -6,7 +6,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 
 
-import {data,product} from '../data.js';
+import data from '../data.js';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,7 +41,7 @@ export default function App() {
                         <SwiperSlide>
                             <div className="bestitem">
                                 <div onClick={()=>{navigate('/detail/'+data[i].id)}} className="bestimg_wrap">
-                                    <img className="bestimg" src={process.env.PUBLIC_URL + '/img/img_0'+data[i].id+'.jpg'}/>
+                                    <img className="bestimg" src={process.env.PUBLIC_URL + '/img/pen0'+data[i].id+'.webp'}/>
                                     <IoHeartOutline className="best_icon"/>
                                 </div>
                                 <p>{data[i].title}</p>

@@ -27,7 +27,9 @@ const Detail = (props) => {
         }
     },[num])
     return (
-        <div className="container detail">
+        <>
+            <div className='sub_header'></div>
+            <div className="container detail">
                 {
                     alerttext == true ? <div className='alert alert-warning'>신규 가입시 10% 할인 쿠폰 증정</div> :null
                 }
@@ -87,6 +89,8 @@ const Detail = (props) => {
                 </div>
             </div>
         </div>
+        </>
+        
     );
 };
 
